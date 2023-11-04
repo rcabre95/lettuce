@@ -1,14 +1,20 @@
-import { useState } from 'react'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './components/header/Header';
+import Reservation from './components/reservation/Reservation';
+import Footer from './components/footer/Footer';
+import MainContent from './components/content/MainContent';
+import Banner from './components/banner/Banner';
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [showForm, setShowForm] = useState<boolean>(false);
 
   return (
     <>
-      <h1>hello</h1>
+      <main className={`font-playfair bg-white-wood bg-cover bg-center bg-no-repeat bg-local h-fit w-screen`}>
+        <Header />
+        <Banner />
+        <Reservation />
+        <MainContent />
+        <Footer />
+      </main>
     </>
   )
 }
