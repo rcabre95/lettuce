@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <main className={`font-playfair-display bg-white-wood bg-cover bg-center bg-no-repeat bg-local h-fit w-screen `}>
+      <main className={`font-playfair-display bg-white-wood bg-cover bg-center bg-no-repeat bg-local h-fit w-screen flex flex-col justify-center items-center`}>
         <Header />
         <Banner />
         <Reservation />
