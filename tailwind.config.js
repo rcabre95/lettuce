@@ -7,10 +7,12 @@ export default {
     extend: {
       backgroundImage: {
         'white-wood':  "url('./src/assets/white-wood.jpeg')",
-        'dark-wood': "url('./src/assets/Aba-wood-1.jpg')"
+        'dark-wood': "url('./src/assets/Aba-wood-1.jpg')",
+        'plates': "url('./src/assets/up-47.jpg')"
       },
       fontFamily: {
-        "playfair": ['Playfair', 'serif']
+        "playfair-display": ['"Playfair Display"', 'serif'],
+        "montserrat": ["Montserrat", 'sans-serif']
       }
     },
   },
