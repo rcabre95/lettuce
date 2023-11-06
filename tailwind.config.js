@@ -20,6 +20,10 @@ export default {
           blue: "#102c44"
         }
       },
+      scale: {
+        '200': '2',
+        '250': '2.5'
+      }
     },
   },
   plugins: [],
