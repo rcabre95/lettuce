@@ -13,7 +13,13 @@ export default {
       fontFamily: {
         "playfair-display": ['"Playfair Display"', 'serif'],
         "montserrat": ["Montserrat", 'sans-serif']
-      }
+      },
+      colors: {
+        lettuce: {
+          cream: "#FEFBEA",
+          blue: "#102c44"
+        }
+      },
     },
   },
   plugins: [],
