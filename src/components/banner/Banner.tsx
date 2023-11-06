@@ -1,10 +1,12 @@
-import React from 'react'
-
 export default function Banner() {
   return (
-    <div className={`hidden md:flex md:flex-row md:w-full md:h-72`}>
-      <img className={`w-7/12`} src="/src/assets/up-47.jpg" alt="food image" />
-      <img className={`w-4/12`} src="/src/assets/Aba_VillageSalad.jpg" alt="salad" />
+    <div className={`hidden md:flex flex-row h-128 mb-4 justify-between w-11/12 max-w-7xl gap-3`}>
+      <div className="h-full w-5/12 overflow-hidden flex justify-center items-end">
+        <img className={``} src="/src/assets/up-47.jpg" alt="food image" />
+      </div>
+      <div className="h-full w-7/12 overflow-hidden flex justify-center items-center">
+        <img className={`scale-125`} src="/src/assets/Aba_VillageSalad.jpg" alt="salad" />
+      </div>
     </div>
   )
 }
