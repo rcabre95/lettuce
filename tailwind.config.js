@@ -6,8 +6,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'white-wood':  "url('./src/assets/white-wood.jpeg')",
-        'dark-wood': "url('./src/assets/Aba-wood-1.jpg')",
+        'white-wood':  "url('./src/assets/white-wood.webp')",
+        'dark-wood': "url('./src/assets/Aba-wood-1.webp')",
         'plates': "url('./src/assets/up-47.jpg')"
       },
       fontFamily: {
