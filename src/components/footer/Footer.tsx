@@ -10,7 +10,7 @@ export default function Footer() {
 function UpperFooter() {
     return (
     <>
-    <div className="flex w-full md:w-2/3 flex-wrap bg-blue-950 justify-end">
+    <div className="flex w-full md:w-2/3 flex-wrap justify-end">
         <section className={`w-1/2 md:w-1/6 text-right md:text-left mb-4`}>
             <h4>HOURS</h4>
             <ul>
@@ -29,8 +29,8 @@ function UpperFooter() {
         </section>
         
     </div>
-        <div className="w-full md:w-2/3 mb-4 bg-green-300 h-fit md:flex md:flex-col md:items-end mt-2 mr-2">
-            <section className="md:w-1/3 bg-slate-400 text-right md:text-left md:flex md:flex-col">
+        <div className="w-full md:w-2/3 mb-4 h-fit md:flex md:flex-col md:items-end mt-2 mr-2">
+            <section className="md:w-1/3 text-right md:text-left md:flex md:flex-col">
                 <a href="/"><h4 className="underline">CONTACT</h4></a>
                 <a href="/"><h4 className="underline">NEWSLETTER</h4></a>
             </section>
