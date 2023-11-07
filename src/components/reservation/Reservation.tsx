@@ -37,14 +37,12 @@ export default function Reservation() {
             <h3 className="text-2xl mb-4">MAKE A RESERVATION</h3>
             <form className={`${formStep < 2 ? "block" : "hidden"} font-montserrat md:w-5/6`} onSubmit={handleSubmit(submitHandler)}>
                 <div className={`${formStep < 1 ? "flex" : "hidden"} flex-col md:flex-row mb-2`}>
-                    <label className="hidden" htmlFor="resDate">Reservation Date</label>
-                    <input className={`w-56 h-10 border text-center`} id="resDate" type="date" {...register("date", {
+                    <input aria-label="Reservation Date" className={`w-56 h-10 border text-center`} id="resDate" type="date" {...register("date", {
                         required: true,
                         valueAsDate: true,
                     })} />
-                    
-                    <label className="hidden" htmlFor="resTime">Reservation Time</label>
-                    <select id="resTime" className={`w-56 h-10 border text-center`} {...register("time", {
+
+                    <select aria-label="Reservation Time" id="resTime" className={`w-56 h-10 border text-center`} {...register("time", {
                         required: true,
                     })}>
                         {times.map((time, index) => {
@@ -57,8 +55,7 @@ export default function Reservation() {
                         })}
                     </select>
 
-                    <label className="hidden" htmlFor="numGuests">Number of Guests</label>
-                    <select id="numGuests" className={`w-56 h-10 border text-center`} {...register("guests", {
+                    <select aria-label="Number of Guests" id="numGuests" className={`w-56 h-10 border text-center`} {...register("guests", {
                         required: true,
                     })}>
                         {[...Array(8).keys()].map(item => {
@@ -71,8 +68,7 @@ export default function Reservation() {
                 </div>
 
                 <div className={`${formStep === 1 ? "flex" : "hidden"} flex-col md:flex-row mb-2`}>
-                    <label htmlFor="nameInput" className="hidden"></label>
-                    <input className={`w-56 h-10 border text-center`} placeholder="Name" id="nameInput" type="text" {...register("name", {
+                    <input aria-label="Enter your name" className={`w-56 h-10 border text-center`} placeholder="Name" id="nameInput" type="text" {...register("name", {
                         required: "Please enter your name",
                         minLength: {
                             value: 2,
@@ -80,8 +76,7 @@ export default function Reservation() {
                         }
                     })} />
 
-                    <label htmlFor="phoneInput" className="hidden"></label>
-                    <input className={`w-56 h-10 border text-center`} placeholder="Phone Number" id="phoneInput" type="text" {...register("phone", {
+                    <input aria-label="Enter your phone number" className={`w-56 h-10 border text-center`} placeholder="Phone Number" id="phoneInput" type="text" {...register("phone", {
                         required: true,
                         minLength: {
                             value: 10,
@@ -89,8 +84,7 @@ export default function Reservation() {
                         }
                     })} />
 
-                    <label htmlFor="emailInput" className="hidden"></label>
-                    <input className={`w-56 h-10 border text-center`} placeholder="Email Address" id="emailInput" type="email" {...register("email", {
+                    <input aria-label="Enter your email address" className={`w-56 h-10 border text-center`} placeholder="Email Address" id="emailInput" type="email" {...register("email", {
                         required: "Please enter your email",
                         pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
