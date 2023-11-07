@@ -1,12 +1,11 @@
 import { useForm } from "react-hook-form"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ActionButton from "../shared-ui/ActionButton";
 
 export default function Reservation() {
     const [formStep, setFormStep] = useState<number>(0);
-    const [loading, setLoading] = useState<boolean>(false);
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, watch } = useForm();
 
     const submitHandler = async (formData: any) => {
         console.log(formData)
@@ -27,10 +26,6 @@ export default function Reservation() {
     }
 
     const times: Array<number> = [12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22, 23, 23]
-
-    useEffect(() => {
-        console.log(errors)
-    }, [])
 
     return (
         <section className="flex flex-col h-fit transition-transform duration-100 justify-center items-center border-t border-b w-11/12 border-black mx-4 py-2 md:py-6 max-w-6xl">
@@ -64,10 +59,10 @@ export default function Reservation() {
                             )
                         })}
                     </select>
-                    <ActionButton type="button" text="Find a table" action={tableFinder} />
+                    <ActionButton validation={watch('date') == undefined} type="button" text="Find a table" action={tableFinder} />
                 </div>
 
-                <div className={`${formStep === 1 ? "flex" : "hidden"} flex-col md:flex-row mb-2`}>
+                <div className={`${formStep === 1 ? "flex" : "hidden"} flex-col justify-center items-center md:flex-row mb-2`}>
                     <input aria-label="Enter your name" className={`w-56 h-10 border text-center`} placeholder="Name" id="nameInput" type="text" {...register("name", {
                         required: "Please enter your name",
                         minLength: {
@@ -91,12 +86,14 @@ export default function Reservation() {
                             message: "You must provide a valid email address."
                         }
                     })} />
-                    <ActionButton type="submit" text="Reserve my table" />
+                    <ActionButton type="submit" text="Reserve" extraStyles="md:px-2" />
+
                 </div>
             </form>
             <div className={`${formStep < 2 ? "hidden" : "block"} text-center`}>
                 <p>We are so excited to serve you.</p>
                 <p>See you soon!</p>
+                
             </div>
         </section>
     )

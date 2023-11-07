@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className={`bg-dark-wood bg-cover bg-center bg-no-repeat bg-local h-fit md:h-96 w-screen md:flex md:flex-col md:items-end md:justify-end text-lettuce-cream p-4`}>
+        <footer className={`bg-dark-wood bg-cover bg-center bg-no-repeat bg-local h-fit md:min-h-96 w-screen md:flex md:flex-col md:items-end md:justify-end text-lettuce-cream p-4`}>
             <UpperFooter />
             <LowerFooter />
         </footer>

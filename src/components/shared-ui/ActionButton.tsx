@@ -8,7 +8,7 @@ export default function ActionButton({ text, action, type, validation=false, wid
     height?: string}) {
 
     return (
-        <button className={`${width} ${height} hover:bg-lettuce-cream hover:text-lettuce-blue hover:border border-lettuce-blue transition-colors duration-150 text-center bg-lettuce-blue text-lettuce-cream ${extraStyles}`} onClick={action ? action : () => {console.log("")}} type={type} disabled={validation}>
+        <button className={`${width} ${height} disabled:bg-slate-400 disabled:hover:bg-slate-400 disabled:hover:text-lettuce-cream hover:bg-lettuce-cream hover:text-lettuce-blue hover:border disabled:hover:border-0 border-lettuce-blue transition-colors duration-150 text-center bg-lettuce-blue text-lettuce-cream ${extraStyles}`} onClick={action ? action : () => {console.log("")}} type={type} disabled={validation}>
             {text}
         </button>
     )
