@@ -7,11 +7,11 @@ export default function Header() {
 
             <nav className={`px-4 my-2 w-full md:w-5/6`}>
                 <ul className={`py-2  w-full border-t border-b border-black flex flex-wrap justify-between md:justify-around`}>
-                    <li><a href="/">Reserve</a></li>
-                    <li><a href="/">Menu</a></li>
-                    <li><a href="/">Group Dining</a></li>
-                    <li><a href="/">Events</a></li>
-                    <li><a href="/">Team</a></li>
+                    <li className="hover:underline"><a href="/">Reserve</a></li>
+                    <li className="hover:underline"><a href="/">Menu</a></li>
+                    <li className="hover:underline"><a href="/">Group Dining</a></li>
+                    <li className="hover:underline"><a href="/">Events</a></li>
+                    <li className="hover:underline"><a href="/">Team</a></li>
                 </ul>
             </nav>
         </header>

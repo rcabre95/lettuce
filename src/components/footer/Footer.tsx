@@ -31,8 +31,8 @@ function UpperFooter() {
     </div>
     <div className="w-full md:w-2/3 mb-4 h-fit md:flex md:flex-col md:items-end mt-2 mr-2 text-lg">
         <section className="md:w-72 lg:mr-72 text-right md:text-left md:flex md:flex-col">
-            <a href="/"><h4 className="">CONTACT</h4></a>
-            <a href="/"><h4 className="">NEWSLETTER</h4></a>
+            <a className="hover:underline" href="/"><h4 className="">CONTACT</h4></a>
+            <a className="hover:underline" href="/"><h4 className="">NEWSLETTER</h4></a>
         </section>
     </div>
     </>
@@ -43,12 +43,12 @@ function LowerFooter() {
     return (
     <nav className="w-full text-xs md:flex md:self-end -mb-3">
         <ul className="w-full h-20 md:h-10 flex flex-wrap justify-center md:items-end items-center">
-            <li className="p-2"><a href="/">FREQUENT DINER</a></li>
-            <li className="p-2"><a href="/">GIFT CARDS</a></li>
-            <li className="p-2"><a href="/">EMPLOYMENT</a></li>
-            <li className="p-2"><a href="/">LEYE.COM</a></li>
-            <li className="p-2"><a href="/">TERMS OF USE</a></li>
-            <li className="p-2"><a href="/">PRIVACY POLICY</a></li>
+            <li className="p-2"><a className="hover:underline" href="/">FREQUENT DINER</a></li>
+            <li className="p-2"><a className="hover:underline" href="/">GIFT CARDS</a></li>
+            <li className="p-2"><a className="hover:underline" href="/">EMPLOYMENT</a></li>
+            <li className="p-2"><a className="hover:underline" href="/">LEYE.COM</a></li>
+            <li className="p-2"><a className="hover:underline" href="/">TERMS OF USE</a></li>
+            <li className="p-2"><a className="hover:underline" href="/">PRIVACY POLICY</a></li>
         </ul>
     </nav>
     )
