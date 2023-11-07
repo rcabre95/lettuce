@@ -8,7 +8,7 @@ export default {
       backgroundImage: {
         'white-wood':  "url('./src/assets/white-wood.webp')",
         'dark-wood': "url('./src/assets/Aba-wood-1.webp')",
-        'plates': "url('./src/assets/up-47.jpg')"
+        'plates': "url('./src/assets/up-47.webp')"
       },
       fontFamily: {
         "playfair-display": ['"Playfair Display"', 'serif'],
