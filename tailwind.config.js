@@ -26,6 +26,9 @@ export default {
       },
       height: {
         '128': '32rem'
+      },
+      minHeight: {
+        '96': '24rem'
       }
     },
   },
