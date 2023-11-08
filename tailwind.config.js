@@ -6,9 +6,9 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'white-wood':  "url('./src/assets/white-wood.webp')",
-        'dark-wood': "url('./src/assets/Aba-wood-1.webp')",
-        'plates': "url('./src/assets/up-47.webp')"
+        'white-wood':  "url('/white-wood.webp')",
+        'dark-wood': "url('/Aba-wood-1.webp')",
+        'plates': "url('/up-47.webp')"
       },
       fontFamily: {
         "playfair-display": ['"Playfair Display"', 'serif'],

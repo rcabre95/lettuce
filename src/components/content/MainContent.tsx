@@ -6,7 +6,7 @@ export default function MainContent() {
         <article className="my-4 w-full md:w-5/6 max-w-7xl">
             <section className="mb-4 w-full h-fit md:h-96 flex flex-col md:flex-row-reverse items-center my-4 md:my-12">
                 <div className="overflow-hidden w-full md:w-1/3 h-56 md:h-full flex justify-center items-center">
-                    <img className="" src="src/assets/up-35.webp" alt="hummus image" />
+                    <img className="" src="/up-35.webp" alt="hummus image" />
                 </div>
 
                 <div className="md:w-2/3 lg:border-b lg:border-t lg:border-black lg:py-3 px-2 lg:px-20 flex flex-col items-center justify-center">
@@ -18,7 +18,7 @@ export default function MainContent() {
 
             <section className="mb-4 w-full h-fit md:h-96 flex flex-col md:flex-row items-center my-4 md:my-12">
                 <div className="overflow-hidden w-full md:w-1/3 h-56 md:h-full flex justify-center items-center">
-                    <img className="scale-250" src="src/assets/up-35.webp" alt="hummus zoomed image" />
+                    <img className="scale-250" src="/up-35.webp" alt="hummus zoomed image" />
                 </div>
                 <div className="md:w-2/3 lg:border-b lg:border-t lg:border-black lg:py-3 px-2 lg:px-20 flex flex-col items-center justify-center">
                     <h3 className="text-2xl w-full text-center my-2">WINE DINNER</h3>
@@ -30,7 +30,7 @@ export default function MainContent() {
 
             <section className="mb-4 w-full h-fit md:h-96 flex flex-col md:flex-row-reverse items-center my-4 md:my-12">
                 <div className="overflow-hidden w-full md:w-1/3 h-56 md:h-full flex justify-center items-center">
-                    <img className="scale-150 md:scale-200" src="src/assets/up-42.webp" alt="leaf roll image" />
+                    <img className="scale-150 md:scale-200" src="/up-42.webp" alt="leaf roll image" />
                 </div>
                 <div className="md:w-2/3 lg:border-b lg:border-t lg:border-black lg:py-3 px-2 lg:px-20 flex flex-col items-center justify-center">
                     <h3 className="text-2xl w-full text-center my-2">ABOUT ABA</h3>
