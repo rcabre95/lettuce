@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import { useState } from "react";
 import ActionButton from "../shared-ui/ActionButton";
+import { Transition } from "@headlessui/react";
 
 export default function Reservation() {
     const [formStep, setFormStep] = useState<number>(0);
@@ -28,10 +29,19 @@ export default function Reservation() {
     const times: Array<number> = [12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22, 23, 23]
 
     return (
-        <section className="flex flex-col h-fit transition-transform duration-100 justify-center items-center border-t border-b w-11/12 border-black mx-4 py-2 md:py-6 max-w-6xl">
+        <section className="flex flex-col h-fit min-h-38 transition-transform duration-500 justify-center items-center border-t border-b w-11/12 border-black mx-4 py-2 md:py-6 max-w-6xl">
             <h3 className="text-2xl mb-4">MAKE A RESERVATION</h3>
-            <form className={`${formStep < 2 ? "block" : "hidden"} font-montserrat md:w-5/6`} onSubmit={handleSubmit(submitHandler)}>
-                <div className={`${formStep < 1 ? "flex" : "hidden"} flex-col md:flex-row mb-2`}>
+            <form className={`font-montserrat md:w-5/6`} onSubmit={handleSubmit(submitHandler)}>
+                <Transition 
+                    as="div"
+                    show={formStep === 0}
+                    enter="transition-opacity duration-500"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-500"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                    className={`${formStep < 1 ? "flex" : "hidden"} flex-col md:flex-row mb-2`}>
                     <input aria-label="Reservation Date" className={`w-56 h-10 border text-center`} id="resDate" type="date" {...register("date", {
                         required: true,
                         valueAsDate: true,
@@ -60,9 +70,18 @@ export default function Reservation() {
                         })}
                     </select>
                     <ActionButton validation={watch('date') == undefined} type="button" text="Find a table" action={tableFinder} />
-                </div>
+                </Transition>
 
-                <div className={`${formStep === 1 ? "flex" : "hidden"} flex-col justify-center items-center md:flex-row mb-2`}>
+                <Transition
+                    as="div"
+                    show={formStep === 1}
+                    enter="transition-opacity duration-500"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-500"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                    className={`${formStep === 1 ? "flex" : "hidden"} flex-col justify-center items-center md:flex-row mb-2`}>
                     <input aria-label="Enter your name" className={`w-56 h-10 border text-center`} placeholder="Name" id="nameInput" type="text" {...register("name", {
                         required: "Please enter your name",
                         minLength: {
@@ -88,13 +107,25 @@ export default function Reservation() {
                     })} />
                     <ActionButton type="submit" text="Reserve" extraStyles="md:px-2" />
 
-                </div>
+                </Transition>
+                <Transition
+                    className={`text-center`}
+                    as="div"
+                    show={formStep > 1}
+                    enter="transition-opacity duration-500"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-500"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
+                    <p>We are so excited to serve you.</p>
+                    <p>See you soon!</p>
+                </Transition>
+                {/* <div className={`${formStep < 2 ? "hidden" : "block"} text-center`}>
+                    
+                </div> */}
             </form>
-            <div className={`${formStep < 2 ? "hidden" : "block"} text-center`}>
-                <p>We are so excited to serve you.</p>
-                <p>See you soon!</p>
-                
-            </div>
         </section>
     )
 }

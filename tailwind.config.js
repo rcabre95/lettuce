@@ -28,7 +28,8 @@ export default {
         '128': '32rem'
       },
       minHeight: {
-        '96': '24rem'
+        '96': '24rem',
+        '38': '9.5rem'
       }
     },
   },
