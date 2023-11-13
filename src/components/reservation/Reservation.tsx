@@ -56,13 +56,13 @@ export default function Reservation() {
                         valueAsDate: true,
                     })} />
 
-                    <select aria-label="Reservation Time" id="resTime" className={`w-56 h-10 border bg-transparent rounded-none text-center flex items-center justify-center`} {...register("time", {
+                    <select aria-label="Reservation Time" id="resTime" className={`w-56 h-10 border bg-transparent rounded-none text-center flex items-center justify-center mx-auto`} {...register("time", {
                         required: true,
                     })}>
                         {times.map((time, index) => {
 
                             return (
-                                <option key={`${time}${index}`} value={`${time}:${index % 2 == 0 ? "00" : "30"}`}>
+                                <option className="text-center" key={`${time}${index}`} value={`${time}:${index % 2 == 0 ? "00" : "30"}`}>
                                     {`${time > 12 ? time - 12 : time}:${index % 2 == 0 ? "00" : "30"}`}pm
                                 </option>
                             )
@@ -74,7 +74,7 @@ export default function Reservation() {
                     })}>
                         {[...Array(8).keys()].map(item => {
                             return (
-                                <option key={item} value={item+1}>{item+1 >= 8 ? "8+" : item+1} {item+1 === 1? " Person" : " People"}</option>
+                                <option className="text-center" key={item} value={item+1}>{item+1 >= 8 ? "8+" : item+1} {item+1 === 1? " Person" : " People"}</option>
                             )
                         })}
                     </select>
